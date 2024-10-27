@@ -2,19 +2,20 @@
   "name": "devbia-api",
   "version": "1.0.0",
   "description": "DevBia API.",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon"
   },
   "author": {
     "name": "Carlos Farias",
-    "email": "https://github.com/fariascarlos2346"
+    "url": "https://github.com/fariascarlos2346"
   },
   "license": "ISC",
   "dependencies": {
     "express": "^4.21.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7"
+    "nodemon": "^3.1.7",
+    "sucrase": "^3.35.0"
   }
 }
