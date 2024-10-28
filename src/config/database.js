@@ -4,7 +4,7 @@ module.exports = {
     port: 5433,
     username: 'postgres',
     password: 'postgres',
-    database: 'devcarlos',
+    database: 'devbia',
     define: {
         timestamps: true,
         underscored: true,
