@@ -16,7 +16,7 @@ class SessionController {
             .json({ error: 'Make sure your email or password are correct' });
 
         if (!isValid) {
-           emailOrPasswordIncorrect();
+           return emailOrPasswordIncorrect();
         }
 
         const { email, password } = request.body;
@@ -28,13 +28,13 @@ class SessionController {
         });
 
         if (!user) {
-           emailOrPasswordIncorrect();
+           return emailOrPasswordIncorrect();
         }
 
         const isSamePassword = await user.checkPassword(password);
 
         if (!isSamePassword) {
-            emailOrPasswordIncorrect();
+            return emailOrPasswordIncorrect();
         }
 
         return response.status(201).json({
